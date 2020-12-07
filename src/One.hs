@@ -29,6 +29,10 @@ main = fmtLn ("Answer 1: "+|answer1 entries|+"\nAnswer 2: "+|answer2 entries|+""
 
 answer1 :: (Num a, Eq a) => [a] -> a
 answer1 x = head [i * j | i <- x, j <- x, i + j == 2020]
+-- answer1 x = head $ do
+--   a <- x
+--   b <- x
+--   if a + b == 2020 then [a * b] else []
 
 answer2 :: (Num a, Eq a) => [a] -> a
 answer2 x = head [i*j*k | i <- x, j <- x, k <- x, i + j + k == 2020]
