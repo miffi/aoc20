@@ -1,8 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import Fmt
 import qualified Data.Text as T
+import           Fmt
 
 data Slope = Slope Int Int
 
@@ -28,5 +28,5 @@ answer2 text = foldl (\x y -> x * answer1 y text) 1 slope
 check :: Int -> Slope -> (Int, Int, Int) -> T.Text -> (Int, Int, Int)
 check len (Slope right down) (x, 0, acc) text = (x + right, down - 1, if T.index text (x `mod` len) == '#'
                                                                     then acc+1 else acc)
-check _ _ (x, y, acc) _ = (x, y - 1, acc) 
+check _ _ (x, y, acc) _ = (x, y - 1, acc)
 

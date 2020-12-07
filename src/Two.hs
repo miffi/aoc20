@@ -2,7 +2,7 @@
 
 module Main where
 
-import Fmt
+import           Fmt
 
 type Input = [Entry]
 data Entry = Entry Int Int Char String
@@ -22,8 +22,8 @@ answer2 :: Input -> Int
 answer2 = length . filter (==True) . map check
   where
     check (Entry x y char string) = let len = length string
-                                        xTest = if (x-1) > len then False else string !! (x - 1) == char
-                                        yTest = if (y-1) > len then False else string !! (y - 1) == char
+                                        xTest = not (x-1) > len && string !! (x - 1) == char
+                                        yTest = not (y-1) > len && string !! (y - 1) == char
                                       in xTest /= yTest
 
 -- tried to do megaparsec but realised that I suck at parsec combinators

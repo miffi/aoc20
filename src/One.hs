@@ -2,7 +2,7 @@
 
 module Main where
 
-import Fmt
+import           Fmt
 
 entries :: [Int]
 entries = [ 1864, 1192, 1802, 1850, 1986, 1514, 1620, 1910, 1557, 1529, 1081,

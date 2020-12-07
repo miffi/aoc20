@@ -38,3 +38,8 @@ executable three
   import:              deps
   main-is:             Three.hs
   hs-source-dirs:      src
+
+executable four
+  import:              deps
+  main-is:             Four.hs
+  hs-source-dirs:      src
