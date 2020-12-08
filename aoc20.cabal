@@ -43,3 +43,19 @@ executable four
   import:              deps
   main-is:             Four.hs
   hs-source-dirs:      src
+
+executable five
+  import:              deps
+  main-is:             Five.hs
+  hs-source-dirs:      src
+
+executable six
+  import:              deps
+  main-is:             Six.hs
+  hs-source-dirs:      src
+
+executable seven
+  import:              deps
+  main-is:             Seven.hs
+  build-depends:       containers ^>= 0.6.4.1
+  hs-source-dirs:      src
