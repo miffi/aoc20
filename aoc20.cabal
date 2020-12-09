@@ -59,3 +59,14 @@ executable seven
   main-is:             Seven.hs
   build-depends:       containers ^>= 0.6.4.1
   hs-source-dirs:      src
+
+executable eight
+  import:              deps
+  main-is:             Eight.hs
+  build-depends:       containers ^>= 0.6.4.1
+  hs-source-dirs:      src
+
+executable nine
+  import:              deps
+  main-is:             Nine.hs
+  hs-source-dirs:      src
